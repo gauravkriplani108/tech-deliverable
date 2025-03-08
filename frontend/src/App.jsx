@@ -1,9 +1,11 @@
 import "./App.css";
+import icon from "./assets/quotebook.png";
 
 function App() {
 	return (
 		<div className="App">
-			{/* TODO: include an icon for the quote book */}
+			<img src={icon} alt="Quote Book Icon" className="quotebook-icon" />
+
 			<h1>Hack at UCI Tech Deliverable</h1>
 
 			<h2>Submit a quote</h2>
