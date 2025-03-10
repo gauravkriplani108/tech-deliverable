@@ -1,0 +1,163 @@
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), #8ac3ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* App Container */
+.App {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Title Container */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+}
+
+/* Title Icon */
+.quotebook-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Submit Quote Form */
+form {
+    background: rgba(250, 250, 250, 0.534); /*  frosted effect */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 15px rgba(105, 105, 105, 0.06);
+}
+
+/* Form Title */
+form h2 {
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Form input fields */
+input,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+/* Text area */
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    gap: 20px;
+    font-weight: semi-bold;
+}
+
+/* Input message */
+#input-message {
+    height: 100px;
+    resize: none;
+}
+
+/* Submit button */
+button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 15px;
+    width: 125px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+/* Submit button hover */
+button:hover {
+    background-color: #2563eb;
+}
+
+/* Select dropdown */
+select {
+    appearance: none; /* Removes default browser styling */
+    background-color: #3b82f6;
+    color: white;
+    padding: 18px;
+    width: 180px;
+    margin-top: 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 24px;
+    transition: background-color 0.3s;
+}
+
+/* Select dropdown hover effect */
+select:hover {
+    background-color: #2563eb;
+}
+
+/* Quotes grid layout*/
+.messages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+
+/* Individual quote cards */
+.quote {
+    background: rgba(255, 255, 255, 0.45); /*  frosted effect */
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.1);
+    text-align: left;
+    min-height: 100px;
+}
+
+/* Quote text */
+.quote p {
+    margin: 10px 0;
+}
+
+/* Quote date */
+.quote-date {
+    padding-top: 10px;
+    font-size: 14px;
+    color: gray;
+}

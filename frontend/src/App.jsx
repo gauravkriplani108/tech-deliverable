@@ -63,35 +63,49 @@ function App() {
     return (
         <div className="App">
             {/* Icon and title */}
-            <img src={icon} alt="Quote Book Icon" className="quotebook-icon" />
-            <h1>Hack at UCI Tech Deliverable</h1>
+            <div className="title-container">
+                <img
+                    src={icon}
+                    alt="Quote Book Icon"
+                    className="quotebook-icon"
+                />
+                <h1>Hack at UCI Tech Deliverable</h1>
+            </div>
 
             {/* Form submission that doesn't refresh the page */}
-            <h2>Submit a quote</h2>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="input-name">Name</label>
-                <input
-                    type="text"
-                    name="name"
-                    id="input-name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-                <label htmlFor="input-message">Quote</label>
-                <input
-                    type="text"
-                    name="message"
-                    id="input-message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                />
+                <h2 id="submit-heading">Submit a quote</h2>
+
+                <div className="form-group">
+                    <label htmlFor="input-name">Name:</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="input-name"
+                        value={name}
+                        autoComplete="off"
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="input-message">Quote:</label>
+                    <textarea
+                        name="message"
+                        id="input-message"
+                        value={message}
+                        autoComplete="off"
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                    />
+                </div>
+
                 <button type="submit">Submit</button>
             </form>
 
             {/* Filter quotes dropdown */}
-            <label htmlFor="filter">Show quotes from:</label>
+            <label htmlFor="filter">Show quotes from: </label>
             <select
                 id="filter"
                 value={filter}
@@ -113,7 +127,9 @@ function App() {
                                 <strong>{quote.name}</strong>
                             </p>
                             <p>"{quote.message}"</p>
-                            <p>{new Date(quote.time).toLocaleString()}</p>
+                            <p className="quote-date">
+                                {new Date(quote.time).toLocaleString()}
+                            </p>
                         </div>
                     ))
                 ) : (
